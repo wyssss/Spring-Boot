@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.beans.PropertyVetoException;
 @Configuration
-@MapperScan("com.wys.DemoFour.dao")
+@MapperScan("com.wys.demo.dao")
 public class DataSourceConfiguration {
     @Value("${jdbc.driver}")
     private String jdbcDriver;
