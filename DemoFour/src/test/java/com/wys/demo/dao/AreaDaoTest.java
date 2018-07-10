@@ -66,7 +66,7 @@ public class AreaDaoTest {
             }
         }
     }
-   
+
     @Test
     public void testEDeleteArea() {
         List<Area> areaList = areaDao.queryArea();
