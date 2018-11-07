@@ -1,4 +1,5 @@
 package com.example.demo.base;
+
 import com.fasterxml.jackson.annotation.*;
 import com.example.demo.util.Dates;
 import com.example.demo.constants.*;
@@ -14,8 +15,8 @@ import java.util.Map;
 /**
  * 基础实体类
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-29
+ * @version 1.0
  */
 public class BaseDTO implements Serializable {
     private static final long serialVersionUID = -4287607489867805101L;

@@ -10,10 +10,10 @@ import java.util.Map;
 public class ConfigurationTest {
 
     @Bean
-    public Map createMap(){
+    public Map createMap() {
         Map map = new HashMap();
-        map.put("username","zhihao.miao");
-        map.put("age",27);
+        map.put("username", "zhihao.miao");
+        map.put("age", 27);
         return map;
     }
 }

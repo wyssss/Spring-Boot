@@ -3,8 +3,8 @@ package com.example.demo.exception;
 /**
  * 基础异常类
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-31
+ * @version 1.0
  */
 public class BaseException extends RuntimeException {
     private static final long serialVersionUID = -997101946070796354L;
@@ -14,7 +14,8 @@ public class BaseException extends RuntimeException {
      */
     protected String code;
 
-    public BaseException() {}
+    public BaseException() {
+    }
 
     public BaseException(String message) {
         super(message);

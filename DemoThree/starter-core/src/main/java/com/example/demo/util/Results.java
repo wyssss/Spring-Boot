@@ -1,14 +1,17 @@
 package com.example.demo.util;
+
 import com.example.demo.base.Result;
+
 /**
  * Result生成工具类
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-28
+ * @version 1.0
  */
 public class Results {
 
-    protected Results() {}
+    protected Results() {
+    }
 
     public static Result newResult() {
         return new Result();

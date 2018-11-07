@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class AreaServiceImpl implements AreaService {
     @Autowired
@@ -21,9 +22,10 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     public Area getAreaById(int areaId) {
-        int a=1/0;
+        int a = 1 / 0;
         return areaDao.queryAreaById(areaId);
     }
+
     @Transactional
     @Override
     public boolean addArea(Area area) {
@@ -38,16 +40,17 @@ public class AreaServiceImpl implements AreaService {
                     throw new RuntimeException("插入区域信息失败！");
                 }
             } catch (Exception e) {
-                throw new RuntimeException("插入区域信息失败："+e.getMessage());
+                throw new RuntimeException("插入区域信息失败：" + e.getMessage());
             }
         } else {
             throw new RuntimeException("区域信息不能为空！");
 
         }
     }
+
     @Override
     public boolean modifyArea(Area area) {
-        if (area.getAreaId() != null && area.getAreaId()>0) {
+        if (area.getAreaId() != null && area.getAreaId() > 0) {
             area.setLastEditTime(new Date());
             try {
                 int effectNum = areaDao.updateArea(area);
@@ -57,7 +60,7 @@ public class AreaServiceImpl implements AreaService {
                     throw new RuntimeException("更新区域信息失败！");
                 }
             } catch (Exception e) {
-                throw new RuntimeException("插入区域信息失败："+e.toString());
+                throw new RuntimeException("插入区域信息失败：" + e.toString());
             }
         } else {
             throw new RuntimeException("区域信息不能为空！");
@@ -69,7 +72,7 @@ public class AreaServiceImpl implements AreaService {
     @Override
     public boolean deleteArea(int areaId) {
 
-        if (areaId>0) {
+        if (areaId > 0) {
             try {
                 int effectNum = areaDao.deleteArea(areaId);
                 if (effectNum > 0) {
@@ -78,7 +81,7 @@ public class AreaServiceImpl implements AreaService {
                     throw new RuntimeException("删除区域信息失败！");
                 }
             } catch (Exception e) {
-                throw new RuntimeException("删除区域信息失败："+e.toString());
+                throw new RuntimeException("删除区域信息失败：" + e.toString());
             }
         } else {
             throw new RuntimeException("区域id不能为空！");

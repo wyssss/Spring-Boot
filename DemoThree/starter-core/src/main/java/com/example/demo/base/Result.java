@@ -7,8 +7,8 @@ import java.io.Serializable;
 /**
  * 前端返回对象
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-28
+ * @version 1.0
  */
 public class Result implements Serializable {
     private static final long serialVersionUID = 1430633339880116031L;
@@ -39,7 +39,8 @@ public class Result implements Serializable {
     private Object data;
 
 
-    public Result() {}
+    public Result() {
+    }
 
     public Result(boolean success) {
         this.success = success;
@@ -50,7 +51,7 @@ public class Result implements Serializable {
         this.status = status;
     }
 
-    public Result(boolean success, String code, String msg){
+    public Result(boolean success, String code, String msg) {
         this(success);
         this.code = code;
         this.msg = msg;
@@ -63,7 +64,7 @@ public class Result implements Serializable {
         this.msg = msg;
     }
 
-    public Result(boolean success, String code, String msg, Object data){
+    public Result(boolean success, String code, String msg, Object data) {
         this(success);
         this.code = code;
         this.msg = msg;

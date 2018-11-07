@@ -10,7 +10,7 @@
 
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
-   <!--SpringBoot的版本信息-->
+    <!--SpringBoot的版本信息-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

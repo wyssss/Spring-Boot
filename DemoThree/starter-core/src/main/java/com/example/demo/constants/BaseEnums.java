@@ -1,13 +1,15 @@
 package com.example.demo.constants;
+
 import com.example.demo.base.BaseEnum;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 基础枚举值
  *
- * @version 1.0
  * @author bojiangzhou 2018-01-01
+ * @version 1.0
  */
 public enum BaseEnums implements BaseEnum<String, String> {
 
@@ -41,7 +43,7 @@ public enum BaseEnums implements BaseEnum<String, String> {
     }
 
     static {
-        for(BaseEnums enums : BaseEnums.values()){
+        for (BaseEnums enums : BaseEnums.values()) {
             allMap.put(enums.code, enums.desc);
         }
     }

@@ -1,10 +1,11 @@
 package com.example.demo.system.controller;
+
 import com.example.demo.constants.BaseEnums;
 import com.example.demo.constants.Constants;
 import com.example.demo.base.BaseController;
 import com.example.demo.base.BaseEnum;
 import com.example.demo.base.Result;
-import  com.example.demo.system.dto.User;
+import com.example.demo.system.dto.User;
 import com.example.demo.util.Dates;
 import com.example.demo.util.Results;
 
@@ -18,8 +19,8 @@ import java.util.List;
 /**
  * 用户Controller
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-31
+ * @version 1.0
  */
 @RequestMapping("/sys/user")
 @RestController
@@ -49,15 +50,15 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping("/queryAll")
-    public Result queryAll(){
+    public Result queryAll() {
         return Results.successWithData(userList, BaseEnums.SUCCESS.code(), BaseEnums.SUCCESS.desc());
     }
 
     @RequestMapping("/queryOne/{userId}")
-    public Result queryOne(@PathVariable Long userId){
+    public Result queryOne(@PathVariable Long userId) {
         User user = null;
-        for(User u : userList){
-            if(u.getUserId().longValue() == userId){
+        for (User u : userList) {
+            if (u.getUserId().longValue() == userId) {
                 user = u;
             }
         }

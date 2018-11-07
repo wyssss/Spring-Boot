@@ -10,8 +10,8 @@ import java.util.Date;
 /**
  * 系统用户
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-31
+ * @version 1.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User extends BaseDTO {

@@ -4,28 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wys.demo.dao.AreaDao">
     <select id="queryArea" resultType="com.wys.demo.entity.Area">
-		SELECT area_id, area_name,
-		priority, create_time, last_edit_time
-		FROM tb_area
-		ORDER BY priority
-		DESC
-	</select>
+        SELECT area_id, area_name,
+        priority, create_time, last_edit_time
+        FROM tb_area
+        ORDER BY priority
+        DESC
+    </select>
     <select id="queryAreaById" resultType="com.wys.demo.entity.Area">
-		SELECT area_id, area_name,
-		priority, create_time, last_edit_time
-		FROM tb_area
-		WHERE
-		area_id=#{areaId}
-	</select>
+        SELECT area_id, area_name,
+        priority, create_time, last_edit_time
+        FROM tb_area
+        WHERE
+        area_id=#{areaId}
+    </select>
     <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId"
             keyColumn="area_id" parameterType="com.wys.demo.entity.Area">
-		INSERT INTO
-		tb_area(area_name,priority,
-		create_time,last_edit_time)
-		VALUES
-		(#{areaName},#{priority},
-		#{createTime},#{lastEditTime})
-	</insert>
+        INSERT INTO
+        tb_area(area_name,priority,
+        create_time,last_edit_time)
+        VALUES
+        (#{areaName},#{priority},
+        #{createTime},#{lastEditTime})
+    </insert>
     <update id="updateArea" parameterType="com.wys.demo.entity.Area">
         update tb_area
         <set>
@@ -36,10 +36,10 @@
         where area_id=#{areaId}
     </update>
     <delete id="deleteArea">
-		DELETE FROM
-		tb_area
-		WHERE
-		area_id =
-		#{areaId}
-	</delete>
+        DELETE FROM
+        tb_area
+        WHERE
+        area_id =
+        #{areaId}
+    </delete>
 </mapper>

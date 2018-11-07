@@ -7,8 +7,8 @@ import java.nio.charset.Charset;
 /**
  * 系统级常量类
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-28
+ * @version 1.0
  */
 public class Constants {
 

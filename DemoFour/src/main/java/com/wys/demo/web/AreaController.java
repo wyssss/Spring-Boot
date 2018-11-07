@@ -21,26 +21,29 @@ public class AreaController {
     @Autowired
     private AreaService areaService;
 
-    @RequestMapping(value = "/listarea",method = RequestMethod.GET)
-    private Map<String,Object> listArea(){
-        Map<String,Object>modeMap=new HashMap<String, Object>();
-        List<Area> list=areaService.getAreaList();
-        modeMap.put("areaList",list);
+    @RequestMapping(value = "/listarea", method = RequestMethod.GET)
+    private Map<String, Object> listArea() {
+        Map<String, Object> modeMap = new HashMap<String, Object>();
+        List<Area> list = areaService.getAreaList();
+        modeMap.put("areaList", list);
         return modeMap;
     }
-    @RequestMapping(value ="/getareabyid",method = RequestMethod.GET)
-   private Map<String,Object>getAreaById(Integer areaId){
-        Map<String,Object> modelMap=new HashMap<String,Object>();
-        Area area=areaService.getAreaById(areaId);
-        modelMap.put("area",area);
+
+    @RequestMapping(value = "/getareabyid", method = RequestMethod.GET)
+    private Map<String, Object> getAreaById(Integer areaId) {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        Area area = areaService.getAreaById(areaId);
+        modelMap.put("area", area);
         return modelMap;
     }
-    @RequestMapping(value = "/addarea",method = RequestMethod.POST)
-    private  Map<String,Object> addArea(@RequestBody Area area){
-        Map<String,Object> modelMap=new HashMap<String, Object>();
-        modelMap.put("success",areaService.addArea(area));
+
+    @RequestMapping(value = "/addarea", method = RequestMethod.POST)
+    private Map<String, Object> addArea(@RequestBody Area area) {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("success", areaService.addArea(area));
         return modelMap;
     }
+
     @RequestMapping(value = "/modifyarea", method = RequestMethod.POST)
     private Map<String, Object> modifyArea(@RequestBody Area area)
             throws JsonParseException, JsonMappingException, IOException {
@@ -57,7 +60,6 @@ public class AreaController {
         modelMap.put("success", areaService.deleteArea(areaId));
         return modelMap;
     }
-
 
 
 }

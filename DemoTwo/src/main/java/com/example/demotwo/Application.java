@@ -12,17 +12,17 @@ import java.util.Map;
 public class Application {
 
     @Bean
-    public Runnable createRunnable(){
+    public Runnable createRunnable() {
         return () -> System.out.println("spring boot is running");
     }
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(Application.class,args);
+        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
         context.getBean(Runnable.class).run();
         System.out.println(context.getBean(User.class));
         Map map = (Map) context.getBean("createMap");
         int age = (int) map.get("age");
-        System.out.println("age=="+age);
+        System.out.println("age==" + age);
 
     }
 }

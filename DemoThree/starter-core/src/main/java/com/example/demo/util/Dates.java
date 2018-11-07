@@ -1,4 +1,5 @@
 package com.example.demo.util;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 
@@ -9,8 +10,8 @@ import java.util.Date;
 /**
  * 日期时间工具类
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-28
+ * @version 1.0
  */
 public class Dates {
 
@@ -104,7 +105,6 @@ public class Dates {
      * 格式化日期时间
      *
      * @param date 日期时间
-     *
      * @return yyyy-MM-dd HH:mm:ss
      */
     public static String format(Date date) {
@@ -114,10 +114,8 @@ public class Dates {
     /**
      * 格式化日期
      *
-     * @param date 日期(时间)
-     *
+     * @param date    日期(时间)
      * @param pattern 匹配模式 参考：{@link Dates.Pattern}
-     *
      * @return 格式化后的字符串
      */
     public static String format(Date date, String pattern) {
@@ -133,7 +131,6 @@ public class Dates {
      * 解析日期
      *
      * @param date 日期字符串
-     *
      * @return 解析后的日期 默认格式：yyyy-MM-dd HH:mm:ss
      */
     public static Date parseDate(String date) {
@@ -151,10 +148,8 @@ public class Dates {
     /**
      * 解析日期
      *
-     * @param date 日期
-     *
+     * @param date    日期
      * @param pattern 格式 参考：{@link Dates.Pattern}
-     *
      * @return 解析后的日期，默认格式：yyyy-MM-dd HH:mm:ss
      */
     public static Date parseDate(String date, String pattern) {
@@ -170,7 +165,6 @@ public class Dates {
         }
         return null;
     }
-
 
 
 }

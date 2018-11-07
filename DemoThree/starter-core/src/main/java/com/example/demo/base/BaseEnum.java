@@ -3,8 +3,8 @@ package com.example.demo.base;
 /**
  * 基础枚举接口
  *
- * @version 1.0
  * @author bojiangzhou 2017-12-31
+ * @version 1.0
  */
 public interface BaseEnum<K, V> {
 

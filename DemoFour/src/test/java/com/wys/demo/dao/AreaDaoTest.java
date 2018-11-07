@@ -23,6 +23,7 @@ public class AreaDaoTest {
     //通过spring容器注入Dao的实现类
     @Autowired
     private AreaDao areaDao;
+
     @Ignore
     @Test
     public void testAQueryArea() {
@@ -46,12 +47,14 @@ public class AreaDaoTest {
         List<Area> areaList = areaDao.queryArea();
         assertEquals(3, areaList.size());
     }
+
     @Ignore
     @Test
     public void testCQueryAreaById() {
         Area area = areaDao.queryAreaById(2);
         assertEquals("东苑", area.getAreaName());
     }
+
     @Ignore
     @Test
     public void testDUpateArea() {

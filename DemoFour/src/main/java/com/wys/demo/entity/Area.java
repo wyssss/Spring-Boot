@@ -1,4 +1,5 @@
 package com.wys.demo.entity;
+
 import java.util.Date;
 
 public class Area {
@@ -11,7 +12,7 @@ public class Area {
     //权重，越大越靠前
     private Date createTime;
     //创建时间
-    private  Date lastEditTime;
+    private Date lastEditTime;
     //更新时间
 
     public Integer getAreaId() {

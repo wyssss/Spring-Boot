@@ -8,9 +8,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
+
 @Configuration
 @EnableTransactionManagement
-public class TransactionManagementConfiguration  implements TransactionManagementConfigurer {
+public class TransactionManagementConfiguration implements TransactionManagementConfigurer {
     @Autowired
     private DataSource dataSource;
 
